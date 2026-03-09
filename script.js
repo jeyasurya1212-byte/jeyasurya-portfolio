@@ -1,56 +1,83 @@
 gsap.registerPlugin(ScrollTrigger)
 
 gsap.from(".hero h1",{
+
+y:100,
 opacity:0,
-y:80,
 duration:1
+
 })
 
-gsap.from(".hero p",{
-opacity:0,
-y:40,
-delay:.3,
-duration:1
-})
+gsap.from(".hero h3",{
 
-gsap.from(".service-card",{
-scrollTrigger:{
-trigger:".services",
-start:"top 80%"
-},
-opacity:0,
 y:50,
-stagger:.2,
-duration:1
+opacity:0,
+delay:0.3
+
 })
 
-gsap.from(".portfolio-item",{
-scrollTrigger:{
-trigger:".portfolio",
-start:"top 80%"
-},
-opacity:0,
-scale:.8,
-stagger:.2,
-duration:1
+gsap.from(".btn",{
+
+scale:0,
+delay:0.6
+
 })
 
-gsap.from(".skill",{
-scrollTrigger:{
-trigger:".skills",
-start:"top 80%"
-},
+gsap.from(".card",{
+
+scrollTrigger:".services",
+y:80,
 opacity:0,
-x:-50,
-stagger:.2
+stagger:0.2
+
+})
+
+gsap.from(".work",{
+
+scrollTrigger:".portfolio",
+scale:0.5,
+opacity:0,
+stagger:0.2
+
 })
 
 gsap.from(".testimonial",{
-scrollTrigger:{
-trigger:".testimonials",
-start:"top 80%"
-},
-opacity:0,
+
+scrollTrigger:".testimonials",
 y:40,
-stagger:.2
+opacity:0,
+stagger:0.3
+
+})
+
+gsap.to(".ps",{
+
+scrollTrigger:".skills",
+width:"95%",
+duration:2
+
+})
+
+gsap.to(".ai",{
+
+scrollTrigger:".skills",
+width:"90%",
+duration:2
+
+})
+
+gsap.to(".pr",{
+
+scrollTrigger:".skills",
+width:"92%",
+duration:2
+
+})
+
+gsap.to(".ae",{
+
+scrollTrigger:".skills",
+width:"85%",
+duration:2
+
 })
